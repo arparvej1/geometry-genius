@@ -3,7 +3,7 @@ function triangleCalculator() {
     const triangleBase = inputFieldToValue("triangle-base");
     const triangleHight = inputFieldToValue("triangle-hight");
     const area = 0.5 * triangleBase * triangleHight;
-    areaPrint(area, 'triangle-area', 'Triangle'); // call print
+    areaPrint(area, 'triangle-area', 'Triangle');
 }
 
 function inputFieldToValue(fieldId) {
@@ -17,27 +17,13 @@ function areaPrint(area, id, shape) {
     const print = document.getElementById(id);
     print.innerText = area;
     const li = document.createElement('li');
-    li.innerHTML = `<span>${shape}: ${area} cm<sup>2</sup></span><span class="item-x"> x </span>`;
-    li.classList.add('flex');
-    li.classList.add('justify-between');
+    li.innerHTML = `<span>${shape}: ${area} cm<sup>2</sup></span><i class="item-x fa-solid fa-circle-xmark"></i>`;
+    li.classList.add('flex', 'justify-between', 'items-center', 'border-b-2', 'py-2');
     const items = document.getElementById('area-calculation-list');
     items.appendChild(li);
+    const clearAllItems = document.getElementById('clearAllItems');
+    clearAllItems.style.display = 'block';
 }
-
-// remove list
-// function removeItems() {
-//     const itemsX = document.getElementsByClassName('item-x');
-//     for (const item of itemsX) {
-//         item.addEventListener('click', function (event) {
-//             event.target.parentNode.remove();
-//         })
-//     }
-// }
-
-// document.getElementById('area-calculation-list').addEventListener('click', function () {
-//     removeItems();
-// });
-
 
 document.getElementById('area-calculation-list').addEventListener('click', function () {
     const items = document.getElementsByClassName('item-x');
@@ -47,3 +33,10 @@ document.getElementById('area-calculation-list').addEventListener('click', funct
         })
     }
 });
+
+function clearAllItems() {
+    const items = document.getElementById('area-calculation-list');
+    items.innerText = "";
+    const clearAllItems = document.getElementById('clearAllItems');
+    clearAllItems.style.display = 'none';
+};
