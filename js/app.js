@@ -8,11 +8,27 @@ function triangleCalculator() {
 }
 
 function rectangleCalculator() {
-    const rectangleBase = inputFieldToValue("rectangle-w");
-    const rectangleHight = inputFieldToValue("rectangle-l");
-    const area = rectangleBase * rectangleHight;
+    const rectangleW = inputFieldToValue("rectangle-w");
+    const rectangleL = inputFieldToValue("rectangle-l");
+    const area = rectangleW * rectangleL;
     areaPrint(area, 'rectangle-area', 'Rectangle');
-    console.log(rectangleBase, rectangleHight);
+    console.log(rectangleW, rectangleL);
+}
+
+function parallelogramCalculator() {
+    const parallelogramB = inputFieldToValue("parallelogram-b");
+    const parallelogramH = inputFieldToValue("parallelogram-h");
+    const area = parallelogramB * parallelogramH;
+    areaPrint(area, 'parallelogram-area', 'Parallelogram');
+    console.log(parallelogramB, parallelogramH);
+}
+
+function rhombusCalculator() {
+    const rhombusD1 = inputFieldToValue("rhombus-d1");
+    const rhombusD2 = inputFieldToValue("rhombus-d2");
+    const area = 0.5 * rhombusD1 * rhombusD2;
+    areaPrint(area, 'rhombus-area', 'Rhombus');
+    console.log(rhombusD1, rhombusD2);
 }
 
 // common for all card
@@ -31,8 +47,7 @@ function areaPrint(area, id, shape) {
     li.classList.add('flex', 'justify-between', 'items-center', 'border-b-2', 'py-2');
     const items = document.getElementById('area-calculation-list');
     items.appendChild(li);
-    const clearAllItems = document.getElementById('clearAllItems');
-    clearAllItems.style.display = 'block';
+    document.getElementById('clearAllItems').classList.remove('hidden');
 }
 
 document.getElementById('area-calculation-list').addEventListener('click', function () {
@@ -47,6 +62,5 @@ document.getElementById('area-calculation-list').addEventListener('click', funct
 function clearAllItems() {
     const items = document.getElementById('area-calculation-list');
     items.innerText = "";
-    const clearAllItems = document.getElementById('clearAllItems');
-    clearAllItems.style.display = 'none';
+    document.getElementById('clearAllItems').classList.add('hidden');
 };
