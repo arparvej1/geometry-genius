@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Geometry Genius</title>
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.7.0/dist/full.min.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="styles/style.css">
+</head>
+
+<body>
+    <main>
+        <h1 class="text-center text-3xl font-bold my-4">Geometry Genius</h1>
+        <div class="flex flex-col gap-4 lg:flex-row justify-center mx-8" id="main-container">
+            <div class="grid gap-4 grid-cols-1 lg:w-3/4 md:grid-cols-3">
+                <div class="card flex gap-2" id="triangle">
+                    <img class="px-4" src="images/triangle.png" alt="">
+                    <h3 class="text-xl font-semibold">Triangle</h3>
+                    <p>Area (A) = 0.5 x b x h</p>
+                    <div class="flex mx-auto">
+                        <input class="w-12" type="text" id="triangle-base" placeholder="b">
+                        <span class="mx-3">cm</span>
+                        <input class="w-12 ml-2" type="text" id="triangle-hight" placeholder="h">
+                        <span class="mx-3">cm</span>
+                    </div>
+                    <button onclick="triangleCalculator()" id="btn-triangle" class="btn bg-blue-600 text-white text-xl hover:bg-blue-500">Calculate</button>
+                    <p class="font-semibold" id="triangle-area">Area: 0 <span>cm <sup>2</sup></span></p>
+                </div>
+                <div class="card flex gap-2" id="triangle">
+                    <img class="px-4" src="images/triangle.png" alt="">
+                    <h3 class="text-xl font-semibold">Triangle</h3>
+                    <p>Area (A) = 0.5 x b x h</p>
+                    <div class="flex mx-5">
+                        <input class="w-1/5 ml-5" type="text" id="triangle-b" placeholder="b">
+                        <span class="mx-3">cm</span>
+                        <input class="w-1/5 ml-5" type="text" id="triangle-h" placeholder="h">
+                        <span class="mx-3">cm</span>
+                    </div>
+                    <button class="btn bg-blue-600 text-white text-xl hover:bg-blue-500">Calculate</button>
+                    <p class="font-semibold" id="triangle-area">Area: 0 <span>cm <sup>2</sup></span></p>
+                </div>
+                <div class="card flex gap-2" id="triangle">
+                    <img class="px-4" src="images/triangle.png" alt="">
+                    <h3 class="text-xl font-semibold">Triangle</h3>
+                    <p>Area (A) = 0.5 x b x h</p>
+                    <div class="flex mx-5">
+                        <input class="w-1/5 ml-5" type="text" id="triangle-b" placeholder="b">
+                        <span class="mx-3">cm</span>
+                        <input class="w-1/5 ml-5" type="text" id="triangle-h" placeholder="h">
+                        <span class="mx-3">cm</span>
+                    </div>
+                    <button class="btn bg-blue-600 text-white text-xl hover:bg-blue-500">Calculate</button>
+                    <p class="font-semibold" id="triangle-area">Area: 0 <span>cm <sup>2</sup></span></p>
+                </div>
+                <div class="card flex gap-2" id="triangle">
+                    <img class="px-4" src="images/triangle.png" alt="">
+                    <h3 class="text-xl font-semibold">Triangle</h3>
+                    <p>Area (A) = 0.5 x b x h</p>
+                    <div class="flex mx-5">
+                        <input class="w-1/5 ml-5" type="text" id="triangle-b" placeholder="b">
+                        <span class="mx-3">cm</span>
+                        <input class="w-1/5 ml-5" type="text" id="triangle-h" placeholder="h">
+                        <span class="mx-3">cm</span>
+                    </div>
+                    <button class="btn bg-blue-600 text-white text-xl hover:bg-blue-500">Calculate</button>
+                    <p class="font-semibold" id="triangle-area">Area: 0 <span>cm <sup>2</sup></span></p>
+                </div>
+                <div class="card flex gap-2" id="triangle">
+                    <img class="px-4" src="images/triangle.png" alt="">
+                    <h3 class="text-xl font-semibold">Triangle</h3>
+                    <p>Area (A) = 0.5 x b x h</p>
+                    <div class="flex mx-5">
+                        <input class="w-1/5 ml-5" type="text" id="triangle-b" placeholder="b">
+                        <span class="mx-3">cm</span>
+                        <input class="w-1/5 ml-5" type="text" id="triangle-h" placeholder="h">
+                        <span class="mx-3">cm</span>
+                    </div>
+                    <button class="btn bg-blue-600 text-white text-xl hover:bg-blue-500">Calculate</button>
+                    <p class="font-semibold" id="triangle-area">Area: 0 <span>cm <sup>2</sup></span></p>
+                </div>
+                <div class="card flex gap-2" id="triangle">
+                    <img class="px-4" src="images/triangle.png" alt="">
+                    <h3 class="text-xl font-semibold">Triangle</h3>
+                    <p>Area (A) = 0.5 x b x h</p>
+                    <div class="flex mx-5">
+                        <input class="w-1/5 ml-5" type="text" id="triangle-b" placeholder="b">
+                        <span class="mx-3">cm</span>
+                        <input class="w-1/5 ml-5" type="text" id="triangle-h" placeholder="h">
+                        <span class="mx-3">cm</span>
+                    </div>
+                    <button class="btn bg-blue-600 text-white text-xl hover:bg-blue-500">Calculate</button>
+                    <p class="font-semibold" id="triangle-area">Area: 0 <span>cm <sup>2</sup></span></p>
+                </div>
+            </div>
+            <div class="card lg:w-1/4 text-center" id="area-calculation">
+                <h1 class="text-center text-xl lg:text-2xl font-medium lg:font-bold my-3 underline">Area Calculation
+                </h1>
+            </div>
+        </div>
+    </main>
+    <script src="js/app.js"></script>
+</body>
+
+</html>
