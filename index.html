@@ -22,14 +22,14 @@
                     <h3 class="text-xl font-semibold">Triangle</h3>
                     <p>Area (A) = 0.5 x b x h</p>
                     <div class="flex mx-auto">
-                        <input class="w-12" type="text" id="triangle-base" placeholder="b">
-                        <span class="mx-3">cm</span>
-                        <input class="w-12 ml-2" type="text" id="triangle-hight" placeholder="h">
-                        <span class="mx-3">cm</span>
+                        <input class="w-14" type="text" id="triangle-base" placeholder="b">
+                        <span class="mx-1">cm</span>
+                        <input class="w-14 ml-2" type="text" id="triangle-hight" placeholder="h">
+                        <span class="mx-1">cm</span>
                     </div>
                     <button onclick="triangleCalculator()" id="btn-triangle"
                         class="btn bg-blue-600 text-white text-xl hover:bg-blue-800">Calculate</button>
-                    <p class="font-semibold">Area: <span id="triangle-area">0</span> cm <sup>2</sup></p>
+                    <p class="font-semibold">Area: <span id="triangle-area">0</span> cm<sup>2</sup></p>
                 </div>
                 <div class="card flex gap-2" id="triangle">
                     <img class="px-4" src="images/triangle.png" alt="">
@@ -100,6 +100,11 @@
             <div class="card lg:w-1/4 text-center" id="area-calculation">
                 <h1 class="text-center text-xl lg:text-2xl font-medium lg:font-bold my-3 underline">Area Calculation
                 </h1>
+                <ul class="font-semibold text-xl text-left" id="area-calculation-list">
+                    <li class="item flex justify-between"><span>Triangle: 12 cm<sup>2</sup></span><span class="item-x"> x </span></li>
+                    <li class="item">Triangle: 1221 cm<sup>2</sup><span class="item-x"> x </span></li>
+                    <li class="item">Triangle: 21212 cm<sup>2</sup><span class="item-x"> x </span></li>
+                </ul>
             </div>
         </div>
     </main>
