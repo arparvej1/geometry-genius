@@ -1,14 +1,17 @@
+const areaCalculation = document.getElementById('area-calculation');
 
-
-// console.log(parseFloat(inputField.value));
-// console.log(inputValue);
-
+areaCalculation.innerText = "hello";
 
 function triangleCalculator() {
     const triangleBase = inputFieldToValue("triangle-base");
     console.log(triangleBase);
     const triangleHight = inputFieldToValue("triangle-hight");
     console.log(triangleHight);
+    const area = 0.5* triangleBase * triangleHight;
+    console.log(area);
+    areaPrint(area, 'triangle-area');
+    // const print = document.getElementById('triangle-area');
+    // print.innerText = area;
 }
 
 // const btnTriangle = document.getElementById('btn-triangle');
@@ -22,3 +25,7 @@ function inputFieldToValue(fieldId) {
     return inputNum;
 }
 
+function areaPrint(area, id){
+    const print = document.getElementById(id);
+    print.innerText = area;
+}
