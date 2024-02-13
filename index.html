@@ -5,23 +5,26 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Geometry Genius</title>
-    <script src="https://kit.fontawesome.com/774c6dd972.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="styles/style.css">
     <link href="https://cdn.jsdelivr.net/npm/daisyui@4.7.0/dist/full.min.css" rel="stylesheet" type="text/css" />
     <script src="https://cdn.tailwindcss.com"></script>
 </head>
 
 <body>
-    <main>
+    <main class="max-w-screen-xl mx-auto">
         <a href="https://arparvej1.github.io/geometry-genius/" target="_blank" rel="noopener noreferrer">
             <h1 class="text-center text-3xl font-bold my-4">Geometry Genius</h1>
         </a>
         <div class="flex flex-col gap-4 lg:flex-row justify-center mx-8" id="main-container">
+            <!-- Geometry Genius Cards -->
             <div class="grid gap-4 grid-cols-1 lg:w-3/4 md:grid-cols-3">
+                <!-- Card - 1 -->
                 <div class="card hover:bg-gray-100 flex gap-2" id="triangle">
-                    <img class="px-4" src="images/triangle.png" alt="">
+                    <div class="h-32">
+                        <img class="h-[100%] px-2" src="images/triangle.png" alt="">
+                    </div>
                     <h3 class="text-xl font-semibold">Triangle</h3>
-                    <p>Area (A) = 0.5 x b x h</p>
+                    <p>Area (A) = 0.5 &#x2715; b &#x2715; h</p>
                     <div class="flex mx-auto">
                         <input class="w-14" type="text" id="triangle-base" placeholder="b">
                         <span class="mx-1">cm</span>
@@ -32,77 +35,30 @@
                         class="btn bg-blue-600 text-white text-xl hover:bg-blue-800">Calculate</button>
                     <p class="font-semibold">Area: <span id="triangle-area">0</span> cm<sup>2</sup></p>
                 </div>
-                <div class="card flex gap-2" id="triangle">
-                    <img class="px-4" src="images/triangle.png" alt="">
-                    <h3 class="text-xl font-semibold">Triangle</h3>
-                    <p>Area (A) = 0.5 x b x h</p>
-                    <div class="flex mx-5">
-                        <input class="w-1/5 ml-5" type="text" id="triangle-b" placeholder="b">
-                        <span class="mx-3">cm</span>
-                        <input class="w-1/5 ml-5" type="text" id="triangle-h" placeholder="h">
-                        <span class="mx-3">cm</span>
+                <!-- Card - 2 -->
+                <div class="card hover:bg-gray-100 flex gap-2" id="rectangle">
+                    <div class="h-32">
+                        <img  class="h-[100%] px-2" src="images/rectangle.png" alt="">
                     </div>
-                    <button class="btn bg-blue-600 text-white text-xl hover:bg-blue-500">Calculate</button>
-                    <p class="font-semibold" id="triangle-area">Area: 0 <span>cm <sup>2</sup></span></p>
-                </div>
-                <div class="card flex gap-2" id="triangle">
-                    <img class="px-4" src="images/triangle.png" alt="">
-                    <h3 class="text-xl font-semibold">Triangle</h3>
-                    <p>Area (A) = 0.5 x b x h</p>
-                    <div class="flex mx-5">
-                        <input class="w-1/5 ml-5" type="text" id="triangle-b" placeholder="b">
-                        <span class="mx-3">cm</span>
-                        <input class="w-1/5 ml-5" type="text" id="triangle-h" placeholder="h">
-                        <span class="mx-3">cm</span>
+                    <h3 class="text-xl font-semibold">Rectangle</h3>
+                    <p>Area (A) = w &#x2715; I</p>
+                    <div class="flex mx-auto">
+                        <input class="w-14" type="text" id="rectangle-w" placeholder="w">
+                        <span class="mx-1">cm</span>
+                        <input class="w-14 ml-2" type="text" id="rectangle-l" placeholder="l">
+                        <span class="mx-1">cm</span>
                     </div>
-                    <button class="btn bg-blue-600 text-white text-xl hover:bg-blue-500">Calculate</button>
-                    <p class="font-semibold" id="triangle-area">Area: 0 <span>cm <sup>2</sup></span></p>
-                </div>
-                <div class="card flex gap-2" id="triangle">
-                    <img class="px-4" src="images/triangle.png" alt="">
-                    <h3 class="text-xl font-semibold">Triangle</h3>
-                    <p>Area (A) = 0.5 x b x h</p>
-                    <div class="flex mx-5">
-                        <input class="w-1/5 ml-5" type="text" id="triangle-b" placeholder="b">
-                        <span class="mx-3">cm</span>
-                        <input class="w-1/5 ml-5" type="text" id="triangle-h" placeholder="h">
-                        <span class="mx-3">cm</span>
-                    </div>
-                    <button class="btn bg-blue-600 text-white text-xl hover:bg-blue-500">Calculate</button>
-                    <p class="font-semibold" id="triangle-area">Area: 0 <span>cm <sup>2</sup></span></p>
-                </div>
-                <div class="card flex gap-2" id="triangle">
-                    <img class="px-4" src="images/triangle.png" alt="">
-                    <h3 class="text-xl font-semibold">Triangle</h3>
-                    <p>Area (A) = 0.5 x b x h</p>
-                    <div class="flex mx-5">
-                        <input class="w-1/5 ml-5" type="text" id="triangle-b" placeholder="b">
-                        <span class="mx-3">cm</span>
-                        <input class="w-1/5 ml-5" type="text" id="triangle-h" placeholder="h">
-                        <span class="mx-3">cm</span>
-                    </div>
-                    <button class="btn bg-blue-600 text-white text-xl hover:bg-blue-500">Calculate</button>
-                    <p class="font-semibold" id="triangle-area">Area: 0 <span>cm <sup>2</sup></span></p>
-                </div>
-                <div class="card flex gap-2" id="triangle">
-                    <img class="px-4" src="images/triangle.png" alt="">
-                    <h3 class="text-xl font-semibold">Triangle</h3>
-                    <p>Area (A) = 0.5 x b x h</p>
-                    <div class="flex mx-5">
-                        <input class="w-1/5 ml-5" type="text" id="triangle-b" placeholder="b">
-                        <span class="mx-3">cm</span>
-                        <input class="w-1/5 ml-5" type="text" id="triangle-h" placeholder="h">
-                        <span class="mx-3">cm</span>
-                    </div>
-                    <button class="btn bg-blue-600 text-white text-xl hover:bg-blue-500">Calculate</button>
-                    <p class="font-semibold" id="triangle-area">Area: 0 <span>cm <sup>2</sup></span></p>
+                    <button onclick="rectangleCalculator()" id="btn-rectangle"
+                        class="btn bg-blue-600 text-white text-xl hover:bg-blue-800">Calculate</button>
+                    <p class="font-semibold">Area: <span id="rectangle-area">0</span> cm<sup>2</sup></p>
                 </div>
             </div>
+            <!-- Area Calculation -->
             <div class="card lg:w-1/4 text-center" id="area-calculation">
                 <h1 class="text-center text-xl lg:text-2xl font-medium lg:font-bold my-3 underline">Area Calculation
                 </h1>
                 <ul class="font-semibold text-xl text-left" id="area-calculation-list">
-                    
+
                 </ul>
                 <button id="clearAllItems" onclick="clearAllItems()"
                     class="btn hidden mt-2 mx-auto bg-blue-600 text-white text-xl hover:bg-blue-800">Clear All</button>
