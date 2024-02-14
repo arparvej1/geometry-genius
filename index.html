@@ -86,6 +86,40 @@
                         class="btn bg-blue-600 text-white text-xl hover:bg-blue-800">Calculate</button>
                     <p class="font-semibold">Area: <span id="rhombus-area">0</span> cm<sup>2</sup></p>
                 </div>
+                <!-- Card - 5 -->
+                <div class="card hover:bg-gray-100 flex gap-2" id="pentagon">
+                    <div class="h-32">
+                        <img  class="h-[100%] mx-auto px-2" src="images/pentagon.png" alt="">
+                    </div>
+                    <h3 class="text-xl font-semibold">Pentagon</h3>
+                    <p>Area (A) = 0.5 &#x2715; p &#x2715; b</p>
+                    <div class="flex mx-auto">
+                        <input class="w-14" type="text" id="pentagon-p" placeholder="p">
+                        <span class="mx-1">cm</span>
+                        <input class="w-14 ml-2" type="text" id="pentagon-b" placeholder="b">
+                        <span class="mx-1">cm</span>
+                    </div>
+                    <button onclick="pentagonCalculator()" id="btn-pentagon"
+                        class="btn bg-blue-600 text-white text-xl hover:bg-blue-800">Calculate</button>
+                    <p class="font-semibold">Area: <span id="pentagon-area">0</span> cm<sup>2</sup></p>
+                </div>
+                <!-- Card - 6 -->
+                <div class="card hover:bg-gray-100 flex gap-2" id="ellipse">
+                    <div class="h-32">
+                        <img  class="h-[100%] mx-auto px-2" src="images/ellipse.png" alt="">
+                    </div>
+                    <h3 class="text-xl font-semibold">Ellipse</h3>
+                    <p>Area (A) = &#x213C;ab</p>
+                    <div class="flex mx-auto">
+                        <input class="w-14" type="text" id="ellipse-a" placeholder="a">
+                        <span class="mx-1">cm</span>
+                        <input class="w-14 ml-2" type="text" id="ellipse-b" placeholder="b">
+                        <span class="mx-1">cm</span>
+                    </div>
+                    <button onclick="ellipseCalculator()" id="btn-ellipse"
+                        class="btn bg-blue-600 text-white text-xl hover:bg-blue-800">Calculate</button>
+                    <p class="font-semibold">Area: <span id="ellipse-area">0</span> cm<sup>2</sup></p>
+                </div>
             </div>
             <!-- Area Calculation -->
             <div class="card lg:w-1/4 text-center" id="area-calculation">
